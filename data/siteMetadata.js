@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Mark Pitblado',
   author: 'Mark Pitblado',
   headerTitle: 'Mark Pitblado',
-  description: 'My personal site, mostly a blog of my random thoughts',
+  description: 'My personal site, mostly a blog of my random thoughts.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.markpitblado.me',
