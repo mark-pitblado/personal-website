@@ -11,7 +11,7 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'website@layer404.com',
   github: 'https://github.com/arcticFox-git',
-  linkedin: 'https://www.linkedin.com/mark-pitblado',
+  linkedin: 'https://www.linkedin.com/in/mark-pitblado/',
   orcid: 'https://orcid.org/0000-0002-8786-5167',
   locale: 'en-US',
   analytics: {
