@@ -1,20 +1,22 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Understanding a Fracking Site',
+    description: 'A simple react site to better understand hydraulic fracturing in British Columbia.',
+    imgSrc: '/static/images/understanding-a-fracking-site-screenshot.png',
+    href: 'https://understandingafracking.site',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Hazard x Outrage',
+    description: 'Another react app, this time as a single page, to understand the Hazard x Outrage risk communication framework in public health.',
+    imgSrc: '/static/images/hazard-x-outrage-screenshot.png',
+    href: 'https://hazardxoutrage.info',
   },
+  { 
+    title: 'Biodiversity Informatics',
+    description: 'A work in progress, but hope to build a suite to help with biodiversity informatics.',
+    imgSrc: '/static/images/biodiversity-informatics-screenshot.png',
+    href: 'https://biodiversityinformatics.ca'
+  }
 ]
 
 export default projectsData

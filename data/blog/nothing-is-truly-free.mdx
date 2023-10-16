@@ -1,0 +1,64 @@
+---
+title: 'Nothing is Truly Free'
+date: '2023-06-01'
+lastmod: '2023-06-01'
+tags: ['big tech']
+draft: false
+summary: 'The cost of free software is not always obvious.'
+---
+
+I recently decided to make the switch to a custom domain for my personal email, and as part of the setup process was interested in making a simple email signature. I just need to find a free email signature generator, what could go wrong?
+
+I found a site that looked promising (although their chat first interface was a prime example of modernity in web design pushed way too far) and proceeded to enter in some fake information. The first suspicious thing I noticed was the requirement to enter in all the personal information fields (phone, address, email etc) before being able to generate the signature - the user was unable to skip any of these fields. As the company has an incentive to store the information entered (as a marketing firm) I decided to go with the classic `example.com` for website and email and `111-111-1111` for the phone number. No good - the site _emails_ the signature to you, another clue that they are looking for valid emails (it would have been much easier to just generate the signature right on the page). Fine, I'll bite and throw in a burner email address.
+
+When the signature arrives, I do a quick scan of the html. Hidden at the bottom of the signature is a hidden pixel, 1px wide and 1px tall. This is a common technique used by marketing firms to track email opens. Below is the code that was included in the signature, with the domain name and tracking code redacted. Even more bold and brazen, they linked `example.com` (the dummy website I entered) to this same domain.
+
+```html
+<img
+  src="http://mr.<redacted>.net/oo/<redacted>.gif"
+  height="1"
+  width="1"
+  alt=""
+  border="0"
+  style="height:1px;width:1px;border:0;"
+/>
+```
+
+This isn't a novel practice. Wired magazine has written [an article](https://www.wired.com/story/how-to-tell-which-emails-track-you/) outlining ways to block these tracking pixels in your email client. The article is now 2 years old, and so there is likely further automatic anti-tracking functionality that has been built since then.
+
+What is more important than the recognition of the pixel is the realization that we live in a world in which nothing is ever truly free. Companies may appear generous, benevolent even, for offering tools (such as an email signature generator) for free, all the while hiding an ulterior motive. In the worst case scenario, a similar phenomenon [is currently endemic](https://thehackernews.com/2023/03/fake-chatgpt-chrome-browser-extension.html) with browser extensions pretending to be free VPNs, AI assistants, or ad blockers, when really their purpose is to load malware onto your machine.
+
+While large, longstanding firms, such as google have a more clearcut business model (use your data internally to better serve you ads and track you across the web), smaller one-off services should be viewed with an even higher degree of skepticism. In some cases, the objective is malware. In others (and what was most likely the case here), it is to generate large valid email lists. In perhaps the most benevolent case, the objective is to get you familiar with a service so that you end up paying for premium features later (either due to enjoyment or vendor lock-in).
+
+It pains me to see the practice of tracking becoming the norm, however we have to realize just how lucrative advertising can be, and why it makes sense for companies to develop these tools. Consider the following table presented by Statista on the average monetary value of a Facebook user
+
+## Average Annual Revenue per Facebook User ($USD)
+
+_Source_: [Statista](https://www.statista.com/statistics/251328/facebooks-average-revenue-per-user-by-region/#statisticContainer)
+
+| Year    | Worldwide | U.S and Canada | Europe | Asia-Pacific | Rest of World |
+| ------- | --------- | -------------- | ------ | ------------ | ------------- |
+| Q4 2021 | $11.57    | $60.57         | $19.68 | $4.89        | $3.43         |
+| Q1 2022 | $9.54     | $48.29         | $15.35 | $4.47        | $3.14         |
+| Q2 2022 | $9.82     | $50.25         | $15.64 | $4.54        | $3.35         |
+| Q3 2022 | $9.41     | $49.13         | $14.23 | $4.42        | $3.21         |
+| Q4 2022 | $10.86    | $58.77         | $17.29 | $4.61        | $3.52         |
+| Q1 2023 | $9.62     | $48.85         | $15.51 | $4.52        | $3.35         |
+
+If you live in the United States or Canada (as I do), Facebook can afford to spend up to \$48.85 chasing you as a user until they start to lose money. To put it bluntly, the data that you generate as a user, and the advertising this fuels each year, is worth about \$50. You are the product, and the product is worth a lot of money.
+
+> Imagine if instead facebook simplified the equation: install a tracker that monitors your online activity, and in return you receive a $50 cheque every year. **Would you take it?**
+
+The point of this article is not to scare you, but to make you aware of the true cost of free software. The cost is not always obvious, as data is usually the proxy in between the value that you are generating and the revenue that the company is bringing in. When looking at a free service, or a free tool, consider the following:
+
+- What is the business model of the company?
+- What data are they collecting?
+- What is the value of the data that they are collecting?
+- What is the value of the service that they are providing?
+- What (if any) inherent value do I place on the privacy of the data I would be providing?
+
+If, after answering the above, the benefit outweighs the cost, then by all means, use the service. If not, then consider paying for the service in return for a transparent business model. In 2021 the Canadian government [commissioned a study](https://www.priv.gc.ca/en/opc-actions-and-decisions/research/explore-privacy-research/2021/por_2020-21_ca/#fn5) to look at the privacy preferences of Canadians, and found that **38% Canadians were willing to trade their data for discounts or incentives in 2020, _an 8% increase increase from just two years prior._** This is a worrying trend, and I fear that we have created a culture in which this is the norm. "It is out there anyways, privacy is dead" is a common refrain, but I would argue that this is a self-fulfilling prophecy. If we continue to normalize the collection of data, then we will continue to see the erosion of the expectation of privacy from the get go. Companies will have to become more competitive in their data collection practices to keep up in the market, given the extreme value of our data (as shown above).
+
+We can change this. We can change our expectations of an internet in which we pay with our privacy for services that we largely don't need, and refocus our efforts on using quality services that respect us both as users of the service, and more importantly as people whose privacy has inherent worth. Transparency should not be the exception but the unequivocal rule. Nothing is truly free, it never was, we just paid for it in a currency we do not recognize until it is too late.
+
+As for me and my tracking pixel, suffice to say we will be parting ways.
