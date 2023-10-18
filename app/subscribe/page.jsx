@@ -9,8 +9,12 @@ export default function Page() {
             alt="Your Company"
           />
           <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight">
-            Subscribe to my newsletter
+            Subscribe to my blog
           </h2>
+          <p className="mt-3 text-center leading-9 tracking-tight">
+            If you enter your email below, you will recieve new articles sent directly to your inbox
+            (approximately once a month).
+          </p>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
@@ -98,13 +102,22 @@ export default function Page() {
           </div>
 
           <p className="mt-10 text-center text-sm">
-            Newsletter powered by{' '}
+            Email newsletter powered by{' '}
             <a
               href="https://buttondown.email/refer/mark-pitblado"
               target="_blank"
               className="font-semibold leading-6 text-indigo-500 hover:text-indigo-600 dark:text-lime-200 dark:hover:text-lime-300"
             >
               Buttondown
+            </a>
+          </p>
+          <p className="mt-3 text-center text-sm">
+            A reminder that you may view privacy details{' '}
+            <a
+              href="/privacy"
+              className="font-semibold leading-6 text-indigo-500 hover:text-indigo-600 dark:text-lime-200 dark:hover:text-lime-300"
+            >
+              here.
             </a>
           </p>
         </div>
