@@ -16,7 +16,10 @@ export default function Home({ posts }) {
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description} You can configure a subscription{' '}
-            <a href="/subscribe" className="font-bold text-cyan-500 hover:text-cyan-600">
+            <a
+              href="/subscribe"
+              className="font-bold text-cyan-500 dark:text-lime-200 hover:text-cyan-600 dark:hover-text-lime-300"
+            >
               here.
             </a>
           </p>
