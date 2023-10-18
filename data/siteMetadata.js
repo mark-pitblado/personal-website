@@ -8,7 +8,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.markpitblado.me',
   siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.jpg',
+  socialBanner: '/static/images/twitter-card.png',
   email: 'website@layer404.com',
   github: 'https://github.com/arcticFox-git',
   linkedin: 'https://www.linkedin.com/in/mark-pitblado/',
