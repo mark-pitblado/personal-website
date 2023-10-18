@@ -1,3 +1,7 @@
+import { genPageMetadata } from 'app/seo'
+
+export const metadata = genPageMetadata({ title: 'Subscribe' })
+
 export default function Page() {
   return (
     <>
