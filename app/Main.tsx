@@ -15,7 +15,10 @@ export default function Home({ posts }) {
             Latest
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            {siteMetadata.description} You can configure a subscription{' '}
+            <a href="/subscribe" className="font-bold text-cyan-500 hover:text-cyan-600">
+              here.
+            </a>
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
