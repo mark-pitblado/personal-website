@@ -1,0 +1,89 @@
+---
+title: 'FreshRSS and Omnivore: A perfect match'
+date: '2023-10-25'
+tags: ['productivity', 'open-source', 'rss']
+draft: false
+layout: PostSimple
+summary: 'FreshRSS (an RSS reader) and Omnivore (an open-source read-it-later service) are a perfect match for a distraction-free reading experience.'
+---
+
+You wake up in a tizzy, barely cognizant of the day, and pick up your phone to silence that incessant alarm. Next, a quick glance at the notifications for the day. Congratulations, you're already behind. Six emails (two of high importance), ten messages, and a gazillion news articles. Oh? What's this? Ding! Congratulations, you just got 10% off your next Uber Eats order! Lucky you.
+
+The modern internet is a deluge of content, everyone knows that and it's nothing new. As there are so many services competing for our limited time, services now aggressively try to outbid each other for our eyeballs. Instead of us seeking out information, they are more than happy to forcefully come to us. Invading our inbox, our notifications, and our attention. Most importantly, in most cases they do so by default, forcing us to opt-out of their services rather than opt-in. This is a problem.
+
+Instead, we should be the ones to passively _listen_ to the steady heartbeat of the internet - particularly feeds that we have an interest in and enjoy - and seek to cut out the rest. This is where RSS (Really Simple Syndication) comes in. RSS is a standard that allows websites to publish their content in a format that can be easily read by other applications. By subscribing to an RSS feed, you can receive the items and information published in a condensed manner that works for you. I like to think of it like a river, you can watch as ephemeral thoughts flows by, and then scoop out and read or save the bits that you want to.
+
+To do that, you will need a feed reader. There are many out there, however this article is going to focus on [FreshRSS](https://www.freshrss.org/), an open-source, self-hostable feed reader that can be both used as a standalone web application or integrate with other services. We'll go over how to set up FreshRSS quickly and easily, and then pair it with another service, [Omnivore](https://omnivore.app), an open-source, read-it-later app, to create a complete workflow.
+
+# Setting up FreshRSS
+
+There is no cloud-hosted option available directly from the maintainer of FreshRSS. Instead, there are a few secondary options avaiable that will host it for you for a very fair fee. My personal favourite is [pikapods](https://pikapods.com/). If you just want to try out FreshRSS before going all in, pikapods allows you to start with $5 in credits, good for about two months of FreshRSS use on the recommended resource settings. Alternatively, you can also host it on your own server, however the above will be easiest for most people.
+
+## Step 1
+
+After creating an account on pikapods, you will be presented with a dashboard. Click on the "Create a new pod" button. Choose FreshRSS from the dropdown menu of available apps, and give the pod any name that will help you remember what it is for. I use "FreshRSS" for simplicity.
+
+Next, you will need to set two important environmental variables; your username and password for the site. These will be used to log in to FreshRSS. As always, I recommend setting something strong and unique. Once you are done, click "Add pod".
+
+![pikapods dashboard](/static/images/pikapods-create-pod-screenshot.png)
+
+## Step 2
+
+Once the pod has been created, you will be able to access FreshRSS on a random subdomain of pikapods.com, provided to you. If you prefer, you can also set your own domain to point to the pod, however I'll leave that as beyond the scope of this article. Click on the "Open pod" button to access FreshRSS.
+
+After logging in, you'll probably want to load in some content! Most mainstream news sites have an RSS feed, they just don't advertise it as well as their social feeds. To find the RSS feed for a site, I would suggest just searching "site name rss" in your favourite search engine. For convenience, I've included links to a few feeds below:
+
+- [The Verge](https://www.theverge.com/rss/index.xml)
+- [The New York Times](https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml)
+- [The Washington Post](https://feeds.washingtonpost.com/rss/national)
+- [The Wall Street Journal](https://feeds.a.dj.com/rss/RSSWorldNews.xml)
+- [The Guardian](https://www.theguardian.com/world/rss)
+- [The Economist](https://www.economist.com/sections/economics/rss.xml)
+- [Wired](https://www.wired.com/feed/rss)
+
+Note that you don't need any credentials to access these feeds, they are all public. However, you will need credentials to _read_ the content if the article is behind a paywall. Many personal bloggers also have RSS feeds, for example, the feed for this site can be found at [https://markpitblado.me/feed.xml](https://markpitblado.me/feed.xml). All the RSS feed is doing is (in most cases) is providing a title and summary of the article, the full content is not usually delivered for news sites. Personal and company blogs however, _do_ usually deliver the full content in the feed itself.
+
+## Using FreshRSS on Mobile WITHOUT an App
+
+Should you choose to forgo an app, you can use FreshRSS on mobile right from the web interface (and it's actually quite good). I would suggest using the reading view (which can be toggled by clicking on the little book icon in the top menu). This will present things as a feed like so:
+
+![FreshRSS reading view](/static/images/freshrss-mobile-web-view.png)
+
+## Using FreshRSS on Mobile WITH an App
+
+You can integrate FreshRSS into many apps. I use the following, which has a direct integration with FreshRSS:
+
+- NetNewsWire (iOS, macOS) - [https://ranchero.com/netnewswire/](https://ranchero.com/netnewswire/)
+
+# Using FreshRSS with Omnivore
+
+FreshRSS is great, but it's not the complete solution. RSS should be viewed as temporary, and there are some articles that are just too good not to hold on to. This is where [Omnivore](https://omnivore.app) comes in, giving you the ability to save articles to read later, and then digest them (see what I did there?) in a distraction-free environment with the ability to highlight and take notes.
+
+## Saving content to Omnivore
+
+The exact workflow to save from FreshRSS to Omnivore will depend on two things, whether the article is behind a paywall or not (and thus whether the full content of the article is available right within the reader) and whether you are using the web or mobile version of FreshRSS.
+
+### Saving from the web version of FreshRSS
+
+You can use the omnivore browser extension to quickly save articles that you are currently viewing. You can find the links to all the browser extensions in the footer of the omnivore.app website (and so I won't list them here, just in case the links change in the future). I don't personally browse content very often on my computer, however I would suggest the following:
+
+1. Click on the article title in FreshRSS to open the article in a new tab
+2. Click on the omnivore browser extension to save the article to omnivore
+
+That's it! Even for paywalled sites, assuming you have logged-in recently, your browser should remain logged in for a while, and enable you to send the full content of the article to Omnivore. For those that use more hardcore privacy settings or browsers that wipe data more often, you may wish to consider either adding exemptions for the news sites you frequent or use a dedicated browser for reading news so that your sessions are saved.
+
+### Saving from mobile to Omnivore
+
+For this section, I am going to write from the perspective of iOS 17 and using a dedicated app, as this is the solution that I use, however the process is likely similar for android.
+
+1. Click on the article title in the app to open the article in a browser (note that if you have the app for the news site installed it will likely open there)
+2. If you are in the browser, click on the share icon for the browser to open the share sheet, then select the Omnivore app to save the article. You will be asked if you would like to "Read Now" or "Read Later", choose whichever you have time for at the moment.
+3. If you are in the app, click on the share icon (its location is different in each app, but the icon is usually the same/similar) to open the share sheet, then select the Omnivore app to save the article. Same advice as above, choose whichever you have time for at the moment.
+
+# Concluding thoughts
+
+Overall, I like to batch things. In the morning, I will quickly scan the headlines of the day, and click on the articles that look interesting. I then read the two-sentence description and judge whether it is something I would like to read in full. If so, I quickly go through the steps above and save it to Omnivore to "Read Later". Then, in the evening, I will go through my Omnivore queue and read the articles that I have saved earlier, making highlights and notes that will ultimately end up in my Logseq graph. Note that in the below, the browser step is optional, but is often necessary to ensure that the full content of the article is saved if the site is paywalled.
+
+**Internet -> RSS Feed -> FreshRSS -> Browser/App -> Omnivore -> Logseq**
+
+And that's it! A complete workflow for consuming content in a more organized way, built entirely on open-source technologies that can even be entirely self-hosted.
