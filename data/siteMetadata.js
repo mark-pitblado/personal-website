@@ -13,6 +13,9 @@ const siteMetadata = {
   github: 'https://github.com/arcticFox-git',
   linkedin: 'https://www.linkedin.com/in/mark-pitblado/',
   orcid: 'https://orcid.org/0000-0002-8786-5167',
+  plausible: 'https://plausible.io/markpitblado.me',
+  datacamp: 'https://www.datacamp.com/portfolio/markpitblado',
+  exercism: 'https://exercism.org/profiles/mark-pitblado',
   locale: 'en-US',
   analytics: {
     plausibleAnalytics: {
@@ -20,11 +23,10 @@ const siteMetadata = {
     },
   },
   newsletter: {
-
     provider: 'buttondown',
   },
   search: {
-    provider: 'kbar', 
+    provider: 'kbar',
     kbarConfig: {
       searchDocumentsPath: 'search.json',
     },
