@@ -15,12 +15,9 @@ export default function Footer() {
           <SocialIcon kind="exercism" href={siteMetadata.exercism} size={6} />
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
           <div>
-            <Link href="/privacy">Privacy and Terms</Link>
+            Except where otherwise noted, content on this site is licensed under a Creative Commons
+            Attribution 4.0 International license.
           </div>
         </div>
       </div>
