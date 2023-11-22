@@ -9,6 +9,8 @@ export default function Footer() {
         <div className="mb-3 flex space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
           <SocialIcon kind="github" href={siteMetadata.github} size={6} />
+          <a rel="me" href="https://fosstodon.org/@markpitblado"></a>
+          <SocialIcon kind="mastodon" href={siteMetadata.mastodon} size={6} />
           <SocialIcon kind="plausible" href={siteMetadata.plausible} size={6} />
           <SocialIcon kind="orcid" href={siteMetadata.orcid} size={6} />
           <SocialIcon kind="datacamp" href={siteMetadata.datacamp} size={6} />
