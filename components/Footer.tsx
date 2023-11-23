@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
             Except where otherwise noted, content on this site is licensed under a Creative Commons
-            Attribution 4.0 International license. <a rel="me" href="https://fosstodon.org/@markpitblado"></a>
+            Attribution 4.0 International license.
           </div>
         </div>
       </div>
