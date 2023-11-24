@@ -21,7 +21,16 @@ export default function Home({ posts }) {
               className="font-bold text-cyan-500 dark:text-lime-200 hover:text-cyan-600 dark:hover-text-lime-300"
             >
               here.
+            </a>{' '}
+            Shorter posts written on{' '}
+            <a
+              rel="me"
+              href="https://fosstodon.org/@markpitblado"
+              className="font-bold text-cyan-500 dark:text-lime-200 hover:text-cyan-600 dark:hover-text-lime-300"
+            >
+              Mastodon
             </a>
+            .
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
