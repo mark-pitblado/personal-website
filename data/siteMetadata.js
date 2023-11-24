@@ -10,7 +10,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'website@layer404.com',
-  github: 'https://github.com/arcticFox-git',
+  github: 'https://github.com/mark-pitblado',
   mastodon: 'https://fosstodon.org/@markpitblado',
   linkedin: 'https://www.linkedin.com/in/mark-pitblado/',
   orcid: 'https://orcid.org/0000-0002-8786-5167',
