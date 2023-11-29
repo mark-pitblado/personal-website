@@ -1,0 +1,68 @@
+---
+title: 'Private and Public Aspects of Life Can Coexist'
+date: '2023-11-28'
+tags: ['privacy', 'social media']
+draft: false
+layout: PostBanner
+images: ['/static/images/private-public.png']
+summary: "Many people think that to value privacy you must give up your network. That doesn't have to be the case."
+---
+
+Those that know me would describe me as a privacy-conscious person. When I talk to many people about privacy, they shutter at the thought of having to give up the connection they value with their friends online, or about not having a public presence on the internet. I get it, having an online presence in 2023 is all but essential for many careers, and opens the doors to new opportunities at a global scale. Due to the [extensive data collection engaged in by almost all big tech companies](https://www.wired.com/story/meta-twitter-threads-bluesky-spill-hive-mastodon-privacy-comparison/), we have come to equivocate having such a public presence with giving up our privacy. I'm hoping to illustrate here that this doesn't necessarily have to be the case.
+
+This week, upon reading [Platform by Cynthia Johnson](https://cynthia.inc/platform) (not sure if I would recommend it) I took a look at some of my online accounts and began to think of consolidating them under a single identity, my name. I have the benefit (or the curse, depending on how you look at it) of having a unique name. If you google it, you're likely to find me, and I believe, a teacher in Scotland.
+
+Here's the thing, many privacy advocates, that I usually agree with for many things, [suggest using a unique username per site](https://proton.me/blog/safe-username). This makes sense, it's easier to target someone for phishing, account takeover, or general malice if all of their accounts are easy to identify and share a common identifier. The internet can be a nasty place. For me, working in the public sector and having published research, if someone wanted to find me, they could do so anyway, but this may be a bigger concern depending on different places of work.
+
+A counterargument is that if you don't take the username that is your name, it leaves it up for grabs, and someone else could more easily impersonate you. It's a lose-lose, there is no option that contains zero risk. For this reason, I have come to view online activity and identity in two distinct layers. The public layer is the sites that you *want* people to discover, and to which you commit to only allowing to contain information that you are okay with being out there. Blogs, tweets (if we are still calling them that), and sites showing achievement (such as [Exercism](https://exercism.org)) are all places where we want to be public and may wish to have our identity linked. That is the reason we are on the site in the first place, and they are somewhat worthless if not shared. On the other hand, direct messages, emails, and personal files are all aspects of life that we *do not want* people to discover, and it may have legal remifactions if they are. These components should be kept secret, even from the company which is providing them. There is no reason for Google to have access to the contents of your emails (unless you *really* love Bard), and yet unencrypted user content is the norm.
+
+## Creating the Divide
+
+### The Public Side
+
+The first step is to pick what should constitute your public persona, as this is more difficult and generally offers less flexibility than your private side. For me, this includes the following as examples, which I am willing to share here because they are all part of that public side and exposed numerous places on this site. Some people may have many, and others may have a few of these services, but my general rule of thumb is that they should be few enough to reasonably list in a website footer.
+
+| Service   | Username      |
+|-----------|---------------|
+| GitHub    | mark-pitblado |
+| Exercism  | mark-pitblado |
+| Fosstodon | markpitblado  |
+
+Previously, these all used to be anonymous identifiers (I'm sure if someone really tried they could figure it out, but for practical purposes they weren't linked to my primary identity). It soon became obvious, however, that this anonymity would be broken the second that I linked to the service from my personal website. Since the purpose of these services is to share with others, there didn't seem to be a good reason not to unify them under a common username. In order to make these services easier to find for those that know me in the physical world, I considered my name to be the best option. Again, I'm lucky in the fact that it is seldom taken.
+
+Just because these services are *public* does not mean that they should be *insecure*. It is still important to make sure that you, and only you, can make a post to your social channels (MFA is your best friend). It is not critical to limit who has access to the *information* that you post, as you decided it is acceptable to put out into the world at the time you posted it, but still essential to limit who can have access to the machinery to make a post.
+
+### The Wall
+
+The primary tool that I use to bridge the public and private worlds is [SimpleLogin](https://simplelogin.io/), an email aliasing service, in tandem with a custom domain. There are many other services that do the same thing, including [Firefox Relay](https://relay.firefox.com/), and [Fastmail](https://www.fastmail.help/hc/en-us/articles/360060591073-How-to-set-up-aliases), but they all accomplish the objective; protecting your primary email from the outside world. When you sign up for a new service, such as a shopping account or Amazon, you can use the alias instead and then all emails are redirected to your actual email address behind the scenes. For all other services other than those on the public side of the wall, I use a pseudonym as the username when possible, or the aliased email. Minimum via contact details are given out to fulfilll the service requirements (i.e. I cannot hide my name while also making a financial transaction).
+
+Note that this doesn't achieve complete anonymity. If a major threat actor such as a government was looking for a particular account, they could definitely find it. The purpose is to avoid automated leaked lists from database breaches, while not causing too much effort — a healthy medium. Additionally, it creates one more factor to guess for would-be attackers if you choose to go the completely random address route. I would recommend using a custom domain for whichever provider you go with, to ensure that in a worst-case scenario you can leave the service and not missing any incoming emails.
+
+There are various other tools beyond the scope of this post, such as firewalls and networking, on the more technical side that are also useful to accomplish this objective.
+
+### The Private Side
+
+When considering the tools for private information, the basic objective is that nobody should have access to the information except for you and those who actually need it. In messaging, for instance, this means you and the person that you are contacting and that's it. Here, there are two main methodologies, end-to-end encryption (E2EE), or storing information locally and not in a cloud environment. While not necessarily mainstream, there are definitely plentiful options that fulfill this objective. For a great breakdown of what end-to-end encryption is, I would refer readers to [this article](https://proton.me/blog/what-is-end-to-end-encryption).
+
+Note that all the below are just services that I am aware of, and not necessarily endorsements. You should look around and pick the service that works best for you.
+
+Email[^1]: [Protonmail](https://proton.me/mail), [Skiff](https://skiff.com/mail), [Tuta](https://tuta.com/)
+
+[^1]: A note about private email, email itself is not that private a means of communication. The odds are that the email is going to end up on the receiving end in either Gmail or Outlook, neither of which are encrypted from the provider. In Protonmail, there is the option to encrypt the email with a password, or to set up PGP, however very few people actually do that. I am confident (but not certain) that similar functionality would exist in the other platforms.
+
+Messaging: [Signal](https://signal.org/), [Whatsapp](https://www.whatsapp.com/)[^2], [Theema](https://threema.ch/en), iMessage[^3]
+
+[^2]: While the message contents are encrypted, other aspects of the service, including contacts and metadata, are not. For example, Facebook (before it became Meta), [shared Whatsapp phone numbers with the Facebook social network and with advertisers in 2017.](https://www.wired.co.uk/article/signal-vs-whatsapp)
+
+[^3]: There are some boxes to check in order to make sure that this is actually the case, and you also need to make sure that the person you are contacting has the same boxes checked. This is a similar problem to email, in which the practices of the recipient matter. If you are using a dedicated app like Signal, WhatsApp, or Threema, then the recipient will also be under the same protocol and so it is less of a concern.
+
+File Storage: [Proton Drive](https://proton.me/drive), [Filen](https://filen.io/), [Tresorit](https://tresorit.com/)
+
+Passwords: [Bitwarden](https://bitwarden.com), [1password](https://1password.com/)
+
+Photos: Apple Photos (under the advanced protection program), [Ente](https://ente.io/), [Stingle](https://stingle.org/)
+
+Just these 5 aspects: email, messaging, file storage, passwords, and photos can represent your private bubble. Properly encrypted, the information contained within these areas is less subject to a breach, because even if the service provider is compromised, the underlying data remains illegible. In the case of the [LastPass breach](https://www.wired.com/story/lastpass-breach-vaults-password-managers/), this saved users from having their passwords immediately compromised (although there were several other missteps that the company made). For companies in which the data is not encrypted, a breach of the company can mean exposure of the underlying data. All the information that is contained within these five domains do not serve any purpose being public, and should be protected accordingly.
+
+## Special Considerations
+As mentioned before, this model works for me, however it may not work for you if you are the target of harassment, have had an identity change through something like witness protection, or need to keep your employment circumstances unknown (I am not sure if CIA agents create a LinkedIn to seem normal but use their cover story, something to ponder). My view is that connection to the wider world and sharing our knowledge is a positive use of the internet, but it can turn sour quite quickly, and so we must be vigilant. This is something that I am experimenting with, learning as I go.
