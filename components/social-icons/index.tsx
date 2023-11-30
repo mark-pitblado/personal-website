@@ -10,6 +10,8 @@ import {
   Plausible,
   Datacamp,
   Exercism,
+  CreativeCommons,
+  CreativeCommonsBy
 } from './icons'
 
 const components = {
@@ -24,6 +26,8 @@ const components = {
   plausible: Plausible,
   datacamp: Datacamp,
   exercism: Exercism,
+  creative_commons: CreativeCommons,
+  creative_commons_by: CreativeCommonsBy
 }
 
 type SocialIconProps = {

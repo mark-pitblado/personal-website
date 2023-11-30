@@ -15,10 +15,11 @@ export default function Footer() {
           <SocialIcon kind="datacamp" href={siteMetadata.datacamp} size={6} />
           <SocialIcon kind="exercism" href={siteMetadata.exercism} size={6} />
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>
-            Except where otherwise noted, content on this site is licensed under a Creative Commons
-            Attribution 4.0 International license.
+        <div className="mb-2 mt-5 flex flex-col items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex space-x-2">
+            <SocialIcon kind="creative_commons" href="https://creativecommons.org/licenses/by/4.0/" size={6} />
+            <SocialIcon kind="creative_commons_by" href="https://creativecommons.org/licenses/by/4.0/" size={6} />
+            <span>The content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" className="font-bold text-cyan-500 dark:text-lime-200 hover:text-cyan-600 dark:hover-text-lime-300">Creative Commons Attribution 4.0 license.</a></span>
           </div>
         </div>
       </div>
