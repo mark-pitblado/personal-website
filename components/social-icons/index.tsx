@@ -8,8 +8,9 @@ import {
   Mastodon,
   Orcid,
   Plausible,
-  Datacamp,
   Exercism,
+  CreativeCommons,
+  CreativeCommonsBy,
 } from './icons'
 
 const components = {
@@ -22,8 +23,9 @@ const components = {
   mastodon: Mastodon,
   orcid: Orcid,
   plausible: Plausible,
-  datacamp: Datacamp,
   exercism: Exercism,
+  creative_commons: CreativeCommons,
+  creative_commons_by: CreativeCommonsBy,
 }
 
 type SocialIconProps = {
