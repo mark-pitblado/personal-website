@@ -8,7 +8,6 @@ import {
   Mastodon,
   Orcid,
   Plausible,
-  Datacamp,
   Exercism,
   CreativeCommons,
   CreativeCommonsBy
@@ -24,7 +23,6 @@ const components = {
   mastodon: Mastodon,
   orcid: Orcid,
   plausible: Plausible,
-  datacamp: Datacamp,
   exercism: Exercism,
   creative_commons: CreativeCommons,
   creative_commons_by: CreativeCommonsBy
