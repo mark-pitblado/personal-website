@@ -1,7 +1,6 @@
 import {
   Mail,
   Github,
-  Facebook,
   Youtube,
   Linkedin,
   Twitter,
@@ -11,12 +10,12 @@ import {
   Exercism,
   CreativeCommons,
   CreativeCommonsBy,
+  RSSIcon,
 } from './icons'
 
 const components = {
   mail: Mail,
   github: Github,
-  facebook: Facebook,
   youtube: Youtube,
   linkedin: Linkedin,
   twitter: Twitter,
@@ -24,6 +23,7 @@ const components = {
   orcid: Orcid,
   plausible: Plausible,
   exercism: Exercism,
+  rss_icon: RSSIcon,
   creative_commons: CreativeCommons,
   creative_commons_by: CreativeCommonsBy,
 }
