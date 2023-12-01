@@ -13,6 +13,7 @@ export default function Footer() {
           <SocialIcon kind="plausible" href={siteMetadata.plausible} size={6} />
           <SocialIcon kind="orcid" href={siteMetadata.orcid} size={6} />
           <SocialIcon kind="exercism" href={siteMetadata.exercism} size={6} />
+          <SocialIcon kind="rss_icon" href={siteMetadata.rss} size={6} />
         </div>
         <div className="mb-2 mt-5 flex flex-col items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div className="flex space-x-2">

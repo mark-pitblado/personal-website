@@ -17,6 +17,7 @@ const siteMetadata = {
   plausible: 'https://plausible.io/markpitblado.me',
   datacamp: 'https://www.datacamp.com/portfolio/markpitblado',
   exercism: 'https://exercism.org/profiles/mark-pitblado',
+  rss: 'https://markpitblado.me/feed.xml',
   locale: 'en-US',
   analytics: {
     plausibleAnalytics: {
