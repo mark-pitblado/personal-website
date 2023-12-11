@@ -7645,9 +7645,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kbar@npm:0.1.0-beta.43":
-  version: 0.1.0-beta.43
-  resolution: "kbar@npm:0.1.0-beta.43"
+"kbar@npm:0.1.0-beta.44":
+  version: 0.1.0-beta.44
+  resolution: "kbar@npm:0.1.0-beta.44"
   dependencies:
     "@radix-ui/react-portal": ^1.0.1
     fast-equals: ^2.0.3
@@ -7657,7 +7657,7 @@ __metadata:
   peerDependencies:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: cb3eee56295cd6697149ca083ae42957dccbc15cc52b9fbe62b4ebb6e7e3613a812ed8a0083e81be7aadcb85e22d007a59ac5cee25e0a0caa4ba4c95bb5606c8
+  checksum: ac14067b79d30e34639205d9d2d643c1b7983192cda4ec914b01e695dced7b86c29673ef0a4eb3ab522573873e8f79fe5f2480b9f0ba490e1b1c9ed7070d7c4a
   languageName: node
   linkType: hard
 
@@ -7978,7 +7978,7 @@ __metadata:
     next: 13.5.6
     next-contentlayer: 0.3.4
     next-themes: ^0.2.1
-    pliny: 0.1.5
+    pliny: 0.1.6
     postcss: ^8.4.31
     prettier: ^3.0.0
     prettier-plugin-tailwindcss: ^0.4.1
@@ -9651,9 +9651,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pliny@npm:0.1.5":
-  version: 0.1.5
-  resolution: "pliny@npm:0.1.5"
+"pliny@npm:0.1.6":
+  version: 0.1.6
+  resolution: "pliny@npm:0.1.6"
   dependencies:
     "@docsearch/react": ^3.5.0
     "@giscus/react": ^2.3.0
@@ -9662,7 +9662,7 @@ __metadata:
     copyfiles: ^2.4.1
     github-slugger: ^1.4.0
     js-yaml: 4.1.0
-    kbar: 0.1.0-beta.43
+    kbar: 0.1.0-beta.44
     next-contentlayer: ^0.3.4
     next-themes: ^0.2.1
     probe-image-size: ^7.2.3
@@ -9672,7 +9672,7 @@ __metadata:
     next: ">=13.0.0"
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
-  checksum: 2b7df883677088bc4a060c98c5c3e0238331db20ef769392ba9b056cf8a3d0e90b4d0f36085d3f2ecdc9dbdea220794051fa0dc70db1db105674d60e00caaa97
+  checksum: 75479ec7ffc8f3f7f77994e506983848d7dd2e8f4cea882a63d856adc601b7ebed8f5a65406ce9580dbd0e1c09db6c65d5f79ab4605cf702f73efdb5bb23c818
   languageName: node
   linkType: hard
 
