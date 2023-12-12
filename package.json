@@ -42,6 +42,7 @@
     "unist-util-visit": "^4.1.0"
   },
   "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.6",
     "@svgr/webpack": "^8.0.1",
     "@types/mdx": "^2.0.5",
     "@types/react": "^18.2.14",

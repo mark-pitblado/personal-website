@@ -23,6 +23,7 @@ module.exports = {
       },
       fontFamily: {
         serif: ['B612', ...fontFamily.serif],
+        sans: ['B612', ...fontFamily.sans],
       },
       colors: {
         primary: colors.cyan,
@@ -32,11 +33,10 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.primary.500'),
+              color: '#1e66f5',
               '&:hover': {
-                color: `${theme('colors.primary.600')}`,
+                color: `#179299`,
               },
-              code: { color: theme('colors.primary.400') },
             },
             'h1,h2': {
               fontWeight: '700',
@@ -46,26 +46,32 @@ module.exports = {
               fontWeight: '600',
             },
             code: {
-              color: theme('colors.indigo.500'),
+              color: '#fe640b',
             },
           },
         },
         invert: {
           css: {
             a: {
-              color: theme('colors.lime.200'),
+              color: '#a6e3a1',
               '&:hover': {
-                color: `${theme('colors.lime.400')}`,
+                color: '#94e2d5',
               },
-              code: { color: theme('colors.lime.400') },
             },
             'h1,h2,h3,h4,h5,h6': {
               color: theme('colors.gray.100'),
+            },
+            code: {
+              color: '#fab387',
             },
           },
         },
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@catppuccin/tailwindcss'),
+  ],
 }
