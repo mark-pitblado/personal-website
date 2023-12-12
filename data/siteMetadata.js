@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: 'Mark Pitblado',
   description: 'My personal site, mostly a blog of my random thoughts.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://www.markpitblado.me',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
