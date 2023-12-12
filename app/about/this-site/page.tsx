@@ -43,6 +43,10 @@ export default function SiteDetails() {
             </a>{' '}
             and are under a CC0 1.0 license.
           </p>
+          <h4 className="mt-3 text-lg font-bold text-lavender">Content</h4>
+          <p className="mt-3 text-text leading-8">
+            Unless otherwise noted, content on this site is licensed under a CC BY 4.0 license.
+          </p>
         </div>
       </div>
     </>
