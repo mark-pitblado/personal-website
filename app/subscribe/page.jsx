@@ -16,13 +16,14 @@ export default function Page() {
             Subscribe to my blog
           </h2>
           <p className="mt-3 text-center leading-9 tracking-tight">
-            If you enter your email below, you will recieve new articles sent directly to your inbox
-            (approximately once a month).
+            If you enter your email below, you will receive new articles sent directly to your inbox
+            (approximately once a month). There are no costs or ads involved, and there never will
+            be.
           </p>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
-          <div className="bg-white dark:bg-gray-900 px-6 py-12 shadow sm:rounded-lg sm:px-12">
+          <div className="bg-surface0 px-6 py-12 shadow sm:rounded-lg sm:px-12">
             <form
               className="space-y-6"
               action="https://buttondown.email/api/emails/embed-subscribe/mark-pitblado"
@@ -41,7 +42,7 @@ export default function Page() {
                     type="email"
                     autoComplete="email"
                     required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lavender sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -50,7 +51,7 @@ export default function Page() {
                 <button
                   type="submit"
                   value="Subscribe"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white dark:bg-lime-200 dark:text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="flex w-full justify-center rounded-md bg-lavender px-3 py-1.5 text-sm font-semibold leading-6 text-base shadow-sm hover:bg-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lavender"
                 >
                   Subscribe
                 </button>
@@ -62,15 +63,15 @@ export default function Page() {
                 <div className="absolute inset-0 flex items-center" aria-hidden="true">
                   <div className="w-full border-t border-gray-200" />
                 </div>
-                <div className="relative flex justify-center text-sm font-medium leading-6">
-                  <span className="bg-white px-6 text-gray-900">Or follow the blog with</span>
+                <div className="relative flex bg-surface0 rounded-md justify-center text-sm font-medium leading-6">
+                  <span className="text-text px-5">Or follow the blog with</span>
                 </div>
               </div>
 
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <a
                   href="/feed.xml"
-                  className="flex w-full items-center justify-center gap-3 rounded-md dark:bg-lime-200 px-3 py-1.5 text-white dark:text-black bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  className="flex w-full items-center justify-center gap-3 rounded-md bg-green text-base px-3 py-1.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +81,7 @@ export default function Page() {
                   >
                     <path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 136c0-13.3 10.7-24 24-24c137 0 248 111 248 248c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24c83.9 0 152 68.1 152 152c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104c-13.3 0-24-10.7-24-24zm0 120a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
                   </svg>
-                  <span className="text-sm font-semibold leading-6">RSS</span>
+                  <span className="text-sm font-semibold text-base leading-6">RSS</span>
                 </a>
 
                 <a
@@ -110,7 +111,7 @@ export default function Page() {
             <a
               href="https://buttondown.email/refer/mark-pitblado"
               target="_blank"
-              className="font-semibold leading-6 text-indigo-500 hover:text-indigo-600 dark:text-lime-200 dark:hover:text-lime-300"
+              className="font-semibold leading-6 text-green hover:text-teal "
             >
               Buttondown
             </a>

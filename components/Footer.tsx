@@ -15,7 +15,7 @@ export default function Footer() {
           <SocialIcon kind="exercism" href={siteMetadata.exercism} size={6} />
           <SocialIcon kind="rss_icon" href={siteMetadata.rss} size={6} />
         </div>
-        <div className="mb-2 mt-5 flex flex-col items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-2 mt-5 flex flex-col items-center space-x-2 text-sm text-text">
           <div className="flex space-x-2">
             <SocialIcon
               kind="creative_commons"
@@ -31,7 +31,7 @@ export default function Footer() {
               The content on this site is licensed under a{' '}
               <a
                 href="https://creativecommons.org/licenses/by/4.0/"
-                className="font-bold text-cyan-500 dark:text-lime-200 hover:text-cyan-600 dark:hover-text-lime-300"
+                className="font-bold text-green hover:text-teal"
               >
                 Creative Commons Attribution 4.0 license.
               </a>
