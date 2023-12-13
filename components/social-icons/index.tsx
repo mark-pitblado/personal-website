@@ -7,8 +7,6 @@ import {
   Orcid,
   Plausible,
   Exercism,
-  CreativeCommons,
-  CreativeCommonsBy,
   RSSIcon,
 } from './icons'
 
@@ -22,8 +20,6 @@ const components = {
   plausible: Plausible,
   exercism: Exercism,
   rss_icon: RSSIcon,
-  creative_commons: CreativeCommons,
-  creative_commons_by: CreativeCommonsBy,
 }
 
 type SocialIconProps = {
