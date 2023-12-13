@@ -18,7 +18,7 @@ export default function SiteDetails() {
           <h3 className="mt-3 text-xl font-bold text-lavender">Icons</h3>
           <h4 className="mt-3 text-lg font-bold text-lavender">Header</h4>
           <p className="mt-3 text-text leading-8">
-            The animated sun and moon icons were created by{' '}
+            The animated sun and moon icons to switch site theme in the header were created by{' '}
             <a href="https://github.com/cyberalien/line-md" className="text-green hover:text-teal">
               Vjacheslav Trushkin
             </a>{' '}
@@ -26,15 +26,7 @@ export default function SiteDetails() {
           </p>
           <h4 className="mt-3 text-lg font-bold text-lavender">Footer</h4>
           <p className="mt-3 text-text leading-8">
-            Mail and Github and Mastodon icon were created by{' '}
-            <a href="https://github.com/cyberalien/line-md" className="text-green hover:text-teal">
-              Vjacheslav Trushkin
-            </a>{' '}
-            and are under an MIT license.
-          </p>
-          <p className="mt-3 text-text leading-8">
-            RSS icon is by Github and under an MIT license. Plausible, Orcid and Exercism icon are
-            by{' '}
+            All icons are by{' '}
             <a
               href="https://github.com/simple-icons/simple-icons"
               className="text-green hover:text-teal"
