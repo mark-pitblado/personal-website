@@ -19,11 +19,6 @@ const siteMetadata = {
   exercism: 'https://exercism.org/profiles/mark-pitblado',
   rss: 'https://markpitblado.me/feed.xml',
   locale: 'en-US',
-  analytics: {
-    plausibleAnalytics: {
-      plausibleDataDomain: 'markpitblado.me',
-    },
-  },
   newsletter: {
     provider: 'buttondown',
   },
