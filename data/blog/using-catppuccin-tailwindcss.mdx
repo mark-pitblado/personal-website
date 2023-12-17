@@ -1,7 +1,7 @@
 ---
 title: Easy light and dark mode with Catppuccin and TailwindCSS
 date: '2023-12-16'
-summary: Simplifying colour management in light and dark mode for a next js site with the catppuccin tailwindcss plugin.
+summary: Simplifying colour management in light and dark mode for a NextJS site with the Catppuccin tailwindcss plugin.
 layout: PostBanner
 images: ['https://cdn.markpitblado.me/mocha.svg']
 tags: ['nextjs', 'tailwindcss', 'catppuccin']
@@ -50,7 +50,7 @@ typography: ({ theme }) => ({
     },
 ```
 
-However, for the css in various components, there were still several `text-[colour]` and `dark:text-[colour]` classes that needed to be managed. Over the entirety of the site, this would amount to a lot of duplication and a lot of places to change if I wanted to change the colour scheme. The tailwindcss plugin allows for the selection of one of the four cattppucin colour themes (latte, frappe, macchiato and mocha) however this would make both light and dark mode the same. Out of those four, latte is a light theme, the other four are dark themes.
+However, for the css in various components, there were still several `text-[colour]` and `dark:text-[colour]` classes that needed to be managed. Over the entirety of the site, this would amount to a lot of duplication and a lot of places to change if I wanted to change the colour scheme. The tailwindcss plugin allows for the selection of one of the four cattppucin colour themes (latte, frappe, macchiato and mocha) however this would make both light and dark mode the same. Out of those four, latte is a light theme, the other three are dark themes.
 
 ## The solution
 
