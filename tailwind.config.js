@@ -33,7 +33,7 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: '#1e66f5',
+              color: '#40a02b',
               '&:hover': {
                 color: `#179299`,
               },
