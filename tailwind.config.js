@@ -38,12 +38,8 @@ module.exports = {
                 color: `#179299`,
               },
             },
-            'h1,h2': {
-              fontWeight: '700',
-              letterSpacing: theme('letterSpacing.tight'),
-            },
-            h3: {
-              fontWeight: '600',
+            'h1,h2,h3,h4,h5,h6': {
+              color: '#1e66f5',
             },
             code: {
               color: '#fe640b',
@@ -59,7 +55,7 @@ module.exports = {
               },
             },
             'h1,h2,h3,h4,h5,h6': {
-              color: theme('colors.gray.100'),
+              color: '#89dceb',
             },
             code: {
               color: '#fab387',
