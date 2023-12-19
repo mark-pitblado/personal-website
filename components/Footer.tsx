@@ -15,6 +15,11 @@ export default function Footer() {
           <SocialIcon kind="exercism" href={siteMetadata.exercism} size={6} />
           <SocialIcon kind="rss_icon" href={siteMetadata.rss} size={6} />
         </div>
+        <div className="mb-3 text-green">
+          <a href="https://nevermonetize.com" target="_blank">
+            never<b>monetize</b>
+          </a>{' '}
+        </div>
       </div>
     </footer>
   )
