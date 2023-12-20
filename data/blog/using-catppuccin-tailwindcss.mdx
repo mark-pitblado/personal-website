@@ -2,12 +2,11 @@
 title: Easy light and dark mode with Catppuccin and TailwindCSS
 date: '2023-12-16'
 summary: Simplifying colour management in light and dark mode for a NextJS site with the Catppuccin tailwindcss plugin.
-layout: PostBanner
-images: ['https://cdn.markpitblado.me/mocha.svg']
+layout: PostSimple
 tags: ['nextjs', 'tailwindcss', 'catppuccin']
 ---
 
-I was looking to spice up my site a little with a coordinated colour theme. I use cattppucin for my terminal theme and I wanted to use the same colours for my site. I found a [tailwindcss plugin](https://github.com/catppuccin/tailwindcss) that pulled in cattpuccino colours and made them available in tailwindcss via their common name: "pink", "blue", "green", etc. This was great, but I didn't want to have to manage two sets of colours for light and dark mode. I discovered a clever trick to make this work using a single className within the layout.tsx file in my NextJS setup, and I wanted to share it here on the off chance that someone else is also a fan of this colour scheme.
+I was looking to spice up my site a little with a coordinated colour theme. I use cattppucin for my terminal theme and I wanted to use the same colours for my site. I found a [tailwindcss plugin](https://github.com/catppuccin/tailwindcss) that pulled in catppuccin colours and made them available in tailwindcss via their common name: "pink", "blue", "green", etc. This was great, but I didn't want to have to manage two sets of colours for light and dark mode. I discovered a clever trick to make this work using a single className within the layout.tsx file in my NextJS setup, and I wanted to share it here on the off chance that someone else is also a fan of this colour scheme.
 
 ## The problem
 Before this change, there were two places where I had to manage colours. The first was in the tailwindcss.config.js file, in which I could define colours used both in light and dark mode for common elements like links or headers (especially important in the blog posts). These settings look something like this, and could be made separately for the light mode and dark mode (dark mode is defined within `invert`). Note that here I have to use the raw hex value for the colour. 
@@ -92,7 +91,3 @@ The colours used in this site can be found in the [cattpuccin repo README.md](ht
 
 ## Conclusion
 Using the tailwindcss plugin has been fantastic, and overall the colour transition for the entire site took about one evening. I am pretty happy with the result, however there may be some tweaking to do in the future. In particular, I would really like to define a guide to refer to in future development to maintain consistency throughout the site. I would also like to add cattppucin to the code highlighting in the blog posts, and so am hoping to submit a PR to add it to the [prismjs repo](https://github.com/PrismJS/prism-themes). As a thanks to the team for such a great colour theme, I have made a small donation to the [cattppuccin team](https://github.com/sponsors/catppuccin) and you can do the same if you enjoy the theme as well.
-
----
-
-The header image is `mocha.svg` from the [cattpuccin repo](https://github.com/catppuccin/catppuccin) and is licensed under the [MIT license](https://mit-license.org/).
