@@ -14,13 +14,6 @@ const projectsData = [
     href: 'https://showcase1.markpitblado.me',
   },
   {
-    title: 'Biodiversity Informatics',
-    description:
-      'A work in progress, but hope to build a suite to help with biodiversity informatics.',
-    imgSrc: '/static/images/biodiversity-informatics-screenshot.png',
-    href: 'https://biodiversityinformatics.ca',
-  },
-  {
     title: 'Never Monetize',
     description:
       'A jekyll site that can be linked to from other websites to communicate monetization intent with users',
