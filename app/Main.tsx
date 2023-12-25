@@ -2,7 +2,6 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 5
 
@@ -15,8 +14,8 @@ export default function Home({ posts }) {
             Latest
           </h1>
           <p className="text-lg leading-7 text-text">
-            {siteMetadata.description} RSS and newsletter options available{' '}
-            <a href="/subscribe" className="font-bold text-green hover:text-teal">
+            {siteMetadata.description} RSS feed available{' '}
+            <a href="/feed.xml" className="font-bold text-green hover:text-teal">
               here.
             </a>{' '}
             Shorter posts written on{' '}

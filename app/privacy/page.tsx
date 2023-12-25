@@ -61,14 +61,6 @@ export default function Privacy() {
               .
             </li>
             <li className="mt-3">
-              The newsletter functionality of this site is handled by Buttondown. Buttondown's
-              privacy policy can be found{' '}
-              <a href="https://buttondown.email/privacy" className="text-green hover:text-teal">
-                here
-              </a>
-              .
-            </li>
-            <li className="mt-3">
               The full source code of this site is available on Github. This can be found in{' '}
               <a
                 href="https://github.com/mark-pitblado/personal-website"
