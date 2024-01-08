@@ -20,6 +20,12 @@ const projectsData = [
     imgSrc: '/static/images/never-monetize-screenshot.png',
     href: 'https://nevermonetize.com',
   },
+  {
+    title: 'Miniflux Catppuccin Theme',
+    description: 'A css theme for the miniflux rss reader.',
+    imgSrc: '/static/images/catppuccin-miniflux.png',
+    href: 'https://github.com/mark-pitblado/miniflux-catppuccin',
+  },
 ]
 
 export default projectsData
