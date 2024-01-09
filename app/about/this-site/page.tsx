@@ -38,8 +38,9 @@ export default function SiteDetails() {
           </p>
           <p className="mt-3 text-text leading-8">
             Content on this site may have a badge on it, indicating how AI was used in the creation
-            of the page (if it was used at all). These badges are from [ai-label.org](https://ai-label.org)
-            and are licensed under CC-SA. Below are the three badges:
+            of the page (if it was used at all). These badges are from
+            [ai-label.org](https://ai-label.org) and are licensed under CC-SA. Below are the three
+            badges:
           </p>
           <div className="pt-3 flex flex-row justify-start space-x-10">
             <Image
