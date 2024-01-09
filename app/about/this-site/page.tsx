@@ -42,7 +42,7 @@ export default function SiteDetails() {
             [ai-label.org](https://ai-label.org) and are licensed under CC-SA. Below are the three
             badges:
           </p>
-          <div className="pt-3 flex flex-row justify-start space-x-10">
+          <div className="pt-3 flex flex-wrap gap-3 ">
             <Image
               src="https://cdn.markpitblado.me/no-ai-used.png"
               alt="no ai used badge"
