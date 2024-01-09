@@ -1,7 +1,4 @@
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
-import { coreContent } from 'pliny/utils/contentlayer'
-import { genPageMetadata } from 'app/seo'
-import Link from 'next/link'
+import Image from 'next/image'
 
 export default function SiteDetails() {
   return (
@@ -38,6 +35,17 @@ export default function SiteDetails() {
           <h4 className="mt-3 text-lg font-bold text-lavender">Content</h4>
           <p className="mt-3 text-text leading-8">
             Unless otherwise noted, content on this site is licensed under a CC BY 4.0 license.
+          </p>
+          <p className="mt-3 text-text leading-8">
+            Content on this site may have a badge on it, indicating how AI was used in the creation of the page (if it was used at all). These badges are from [ai-label.org](ai-label.org) and are licensed under CC-SA. Below are the three badges:
+          </p>
+          <div className="pt-3 flex flex-row justify-start space-x-10">
+          <Image src="https://cdn.markpitblado.me/no-ai-used.png" alt="no ai used badge" width={150} height={100}/>
+          <Image src="https://cdn.markpitblado.me/assisted-by-ai.png" alt="assisted by ai badge" width={150} height={100}/>
+          <Image src="https://cdn.markpitblado.me/made-with-ai.png" alt="made with ai badge" width={150} height={100}/>
+          </div>
+          <p className="mt-3 text-text leading-8">
+          The creation of this page was assisted by AI.
           </p>
         </div>
       </div>
