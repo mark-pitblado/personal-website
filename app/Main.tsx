@@ -26,6 +26,10 @@ export default function Home({ posts }) {
             >
               Mastodon
             </a>
+            . Part of{' '}
+            <a href="https://blogroll.org" className="font-bold text-green hover:text-teal">
+              Blogroll
+            </a>
             .
           </p>
         </div>
