@@ -1,0 +1,46 @@
+---
+title: "Nobody can code alone, we rely on each other"
+date: '2024-01-11'
+summary: "In using technology, we have to rely on someone else or a particular company. The web is a network of machines and individuals who control them."
+layout: PostSimple
+tags: ['thoughts']
+draft: false
+---
+
+A little over a month ago, I ran into an issue on this blog with [ContentLayer](https://github.com/contentlayerdev/contentlayer). In short, I had transitioned to NextJS 14, and the package did not yet support it. There was an open pull request that seemed to fit all the criteria for the fix. Perfect! Now all that was needed for a maintainer to merge...
+
+As you can see for yourself on [pull request 576](https://github.com/contentlayerdev/contentlayer/pull/576), it took a while. The package was no longer going to be maintained by the same people due to a lack of funding, leaving many who had used the package in some way wondering if they should start migrating to something different, or just wait and see if someone with write access happened to drop by. 
+
+It's easy to get upset about this, to say "look how many people depended on this work, only for it to be abandoned with no support!". To be clear, I have not been closely following the status of the package since, mostly because I align with many of the thoughts expressed in [the social contract of open source](https://snarky.ca/the-social-contract-of-open-source/). It's free software, I have no right to complain when I use it of my own free will without restriction. In fact, ContentLayer was part of [pliny](https://github.com/timlrx/pliny), part of the initial code I chose to run with when starting with Tim's template. Now it'
+s on me to either figure out how to live with it, or patch things as they break. I kinda think that's half the fun, after all, it's just a blog and nobody will die if a particular feature becomes momentarily unavailable.
+
+## We all have to depend on someone
+
+The truth is that we cannot develop software in isolation. Sure, we can reduce the number of unnecessary dependencies our projects use (something that I am actively working towards), but even then we need to interact with different hardware, browsers, standards etc. There will always be change, and it's important to accept that fact rather than trying to fight it. There is a lot of truth in the xkcd comic about the lone maintainer holding up the pillar.
+
+![Dependency comic from xkcd in which a lone pillar is holding up a giant structure. The quote part of the comic reads "A project some random person in Nebraska has been thanklessly maintaining since 2003"](https://imgs.xkcd.com/comics/dependency.png).
+
+## Splitting software into categories
+
+Equally as important, I try to align my expectations of software complexity and reliability to stay in line with what the software is actually responsible for. If I go to someone else's personal blog that I follow, and the menu is a bit off, who cares? They are probably in the middle of a fix, or even developing something cool. Their blog is their playground, and the code doesn't harm anyone. 
+
+If, however, a medical device that has tried to implement AI suddenly starts to fail to deliver on its basic functionality, I might question the decision making ability of those developing it. **In that case, there is a high cost of failure and less benefit of pointless experimentation**. Lives are at stake. We can hold these devices, and the code that supports them, to a higher standard. If that team relies on a particular dependency, then they have a moral duty to confirm that support will be offered (or that ample notice will be provided to migrate).
+
+## Establishing norms or agreements for each piece of software
+
+As [Brett Cannon](https://snarky.ca/) writes:
+
+> Do open source projects that produce open source code need to provide anything beyond this? I say no: open source software starts and stops with the software and its license.
+
+Unless there is clear communication that a certain level of support is to be expected, then that's it! By establishing this as the default, we can then build on it in specific instances. Developers and maintainers can choose to communicate certain expectations to users. "We plan to support this project for three years, and after that, we are uncertain", allows for users to get a good sense of where the project is going and how much time may be left before they need to think about changing things up. Similarly, there may be "end game" plans, or a written commitment to what would happen in the event that the team can no longer put forward any more effort. [Fosstodon](https://fosstodon.org) for example, has a written plan for what would happen in the case that donations could no longer cover the cost of the service.
+
+## Having a diverse set of software that is interoperable
+
+In [The Internet Con](https://craphound.com/category/internetcon/), Cory Doctorow outlines how interoperability is the key to making sure that markets do not become dominated by monopolies. This is critical for all types of software, not just the large social media sites that everyone commonly laments. By having both a suite of software that accomplish similar objectives slightly differently, and interoperability for data or routing, transitioning from one service to another can be relatively painless. When choosing new dependencies to add to our systems, we can think ahead to how easy that dependency would be to transition away from should it no longer be supported.
+
+At the end of the day, both change and working with others is a part of life. It can be joyful if we let it, and in software we are lucky to have thousands of open-source projects to connect to, try out, and experiment with. While I work through some of the pliny dependencies and remove the ones that I don't need, I don't regret starting from the template and working backwards. [Tim](https://github.com/timlrx) has written some great software, better than I could have done given the time I wanted to dedicate to getting the blog setup, and the fact that we are all able to use it and build our own paths onwards from it is cause for celebration. 
+
+<hr/>
+<div className="w-32">
+![no-ai-used-badge](https://cdn.markpitblado.me/no-ai-used.png)
+</div>
