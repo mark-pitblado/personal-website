@@ -23,7 +23,7 @@ curl -H 'authorization: {api_key}' "https://omnivore.app/api/save?url={link_you_
 
 In and of itself, not too bad, however there are lots of parts that will remain constant. The `authorization: {api_key}` portion for example, and also the base of the api route that we are querying. To cut this down, we can use a [zsh function](https://unix.stackexchange.com/a/7966), defined in `.zshrc`. 
 
-For the function, you can pick whatever creative name you like, I have chosen *omnisave* because I think it will stick best in my brain. Also note that the api "key" below is just for example purposes and was generated via a UUID generator, isn't not a real key, but yours should look similar. If you don't yet have an omnivore api key, go to [your settings](https://omnivore.app/settings/api) and click "Create an API key". Add the following anywhere within your `.zshrc` config file. 
+For the function, you can pick whatever creative name you like, I have chosen *omnisave* because I think it will stick best in my brain. Also note that the api "key" below is just for example purposes and was generated via a UUID generator, it is not a real key, but yours should look similar. If you don't yet have an omnivore api key, go to [your settings](https://omnivore.app/settings/api) and click "Create an API key". Add the following anywhere within your `.zshrc` config file. 
 
 ```bash
 omnisave() {
