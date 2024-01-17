@@ -18,7 +18,7 @@ So I went looking for a way to save articles directly to omnivore through the co
 The original command has the following syntax:
 
 ```bash
-curl -H 'authorization = {api_key}' "https://omnivore.app/api/save?url={link_you_wish_to_save}"
+curl -H 'authorization: {api_key}' "https://omnivore.app/api/save?url={link_you_wish_to_save}"
 ```
 
 In and of itself, not too bad, however there are lots of parts that will remain constant. The `authorization = {api_key}` portion for example, and also the base of the api route that we are querying. To cut this down, we can use a [zsh function](https://unix.stackexchange.com/a/7966), defined in `.zshrc`. 
@@ -27,7 +27,7 @@ For the function, you can pick whatever creative name you like, I have chosen *o
 
 ```bash
 omnisave() {
-  curl -H 'authorization = af94403b-8c1e-48ef-b236-85609ada3cb5' "https://omnivore.app/api/save?url=$1"
+  curl -H 'authorization: af94403b-8c1e-48ef-b236-85609ada3cb5' "https://omnivore.app/api/save?url=$1"
 }
 ```
 
