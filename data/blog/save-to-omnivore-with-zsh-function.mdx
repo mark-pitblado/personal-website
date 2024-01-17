@@ -1,0 +1,62 @@
+---
+title: "Save to Omnivore from the command line with a simple zsh custom function"
+summary: "Saving an article to omnivore from the command line is totally doable with curl, however this quick trick simplifies the syntax so that it is much easier to remember."
+date: '2024-01-17'
+layout: PostSimple
+tags: ['omnivore', 'command line']
+images: ['https://cdn.markpitblado.me/omnivore-cli-article-header.jpg']
+---
+
+I have always enjoyed how simple it is to save an article to Omnivore on iOS. Hit the share button, hit the omnivore icon, and boom you're done. On my desktop, however, I didn't have such a solution. I don't use the web interface much, and am finding that the terminal is becoming my home.
+
+Now, before you leap out of your chair and scream "The browser extension! That's one click!", I hear you. That would totally work for 90% of people, but I keep my browser extensions to a bare minimum due to the permission scopes that they require. That isn't a dig against omnivore by any means, I apply the same rule to every extension. 
+
+So I went looking for a way to save articles directly to omnivore through the command line. After a few minutes of researching, I came across [a video](https://www.youtube.com/watch?v=V2nVGbFpEBw) of Jackson (one of the developers) showing how curl could be used in combination with the omnivore api to save articles to your account. It requires two arguments, your api key, and the url of the page you wish to save. That's it that's all. It works both if you are using the hosted omnivore.app site, or your own instance (in which case you would just swap in your domain everywhere I use `omnivore.app` in this post).
+
+## Simplifying curl
+
+The original command has the following syntax:
+
+```bash
+curl -H 'authorization = {api_key}' "https://omnivore.app/api/save?{link_you_wish_to_save}"
+```
+
+In and of itself, not too bad, however there are lots of parts that will remain constant. The `authorization = {api_key}` portion for example, and also the base of the api route that we are querying. To cut this down, we can use a [zsh function](https://unix.stackexchange.com/a/7966), defined in `.zshrc`. 
+
+For the function, you can pick whatever creative name you like, I have chosen *omnisave* because I think it will stick best in my brain. Also note that the api "key" below is just for example purposes and was generated via a UUID generator, isn't not a real key, but yours should look similar. If you don't yet have an omnivore api key, go to [your settings](https://omnivore.app/settings/api) and click "Create an API key". Add the following anywhere within your `.zshrc` config file. 
+
+```bash
+omnisave() {
+  curl -H 'authorization = af94403b-8c1e-48ef-b236-85609ada3cb5' "https://omnivore.app/api/save?$1"
+}
+```
+
+The `$1` indicates that the first argument made after the custom command is going to get put into that location. In this case, the argument will be the hyperlink you wish to save, without quotation marks. This makes it really simple to copy and paste from a browser, or type out manually.
+
+In order to have the command available, the new configuration needs to be loaded. My best advice is just to quit the terminal and open it back up again via `exit`. This seems to work 100% of the time with other things like powerlevel10k and oh-my-zsh installed. If you don't have as much clutter, you can likely just source the file and be good to go.
+
+## Using the custom command
+
+Now it's time to rock and roll. The new custom function should be available and can be called as follows (**remember, no quotes on the link**):
+
+```zsh
+omnisave https://markpitblado.me/blog/save-to-omnivore-with-zsh-function
+```
+
+If you go to your omnivore library, you should now see the link you just saved!
+
+## Troubleshooting
+
+One thing I noticed while setting this up is that you have to be very careful with the quotations in the curl call. Originally I started with a [zsh alias](https://linuxhandbook.com/zsh-aliases/) but kept getting the raw html of the article that I was trying to call returned. After switching to the function this did not occur. It may have been a stray quote somewhere else in my config file causing the issue.
+
+## API key security
+
+In my setup I have the api key hardcoded into the `.zshrc` file, as it isn't really a high security api key for me. However, you may wish to do things differently, and in general I would not recommend hardcoding api keys in text files, just in case you accidentally commit it to a GitHub months later forgetting it is there. 
+
+---
+
+Social card image by Jack Charles. Licensed under the [Unsplash License](https://unsplash.com/license)
+
+<div className="w-32">
+![no-ai-used-badge](https://cdn.markpitblado.me/no-ai-used.png)
+</div>
