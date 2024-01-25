@@ -1,6 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import { MainIcon } from '@/components/MainIcon'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -15,7 +14,13 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <div className="mr-3 ">
-                <MainIcon />
+                <Image
+                  className="rounded-xl"
+                  width={50}
+                  height={50}
+                  alt="cartoon profile picture"
+                  src={siteMetadata.siteLogo}
+                />
               </div>
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (

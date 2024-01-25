@@ -7,7 +7,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://www.markpitblado.me',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/main.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'website@layer404.com',
   github: 'https://github.com/mark-pitblado',
@@ -19,9 +19,6 @@ const siteMetadata = {
   exercism: 'https://exercism.org/profiles/mark-pitblado',
   rss: 'https://markpitblado.me/feed.xml',
   locale: 'en-US',
-  newsletter: {
-    provider: 'buttondown',
-  },
   search: {
     provider: 'kbar',
     kbarConfig: {
