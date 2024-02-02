@@ -32,23 +32,6 @@ export default function Privacy() {
               to third-parties, nor would I in the future.
             </li>
             <li className="mt-3">
-              I collect anonymized site usage analytics through Plausible analytics. The data
-              collected is laid out in{' '}
-              <a
-                href="https://plausible.io/data-policy#first-thing-first-what-we-collect-and-what-we-use-it-for"
-                className="text-green hover:text-teal"
-              >
-                a table posted by Plausible
-              </a>
-              . Since I use the paid hosted version of Plausible, data collected resides in the
-              European Union. To see a full picture of the type of data collected, you may click on
-              the Plausible icon in this site's footer, or visit{' '}
-              <a href="https://plausible.io/markpitblado.me" className="text-green hover:text-teal">
-                the public statistics page for this website
-              </a>
-              .
-            </li>
-            <li className="mt-3">
               This site is hosted on Vercel. I have disabled analytics and site performance
               monitoring on the platform, however keep logs for debugging purposes. These logs are
               available to me for a maximum of one hour. Vercel's privacy policy can be found{' '}

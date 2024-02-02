@@ -14,7 +14,6 @@ const siteMetadata = {
   mastodon: 'https://fosstodon.org/@markpitblado',
   linkedin: 'https://www.linkedin.com/in/mark-pitblado/',
   orcid: 'https://orcid.org/0000-0002-8786-5167',
-  plausible: 'https://plausible.io/markpitblado.me',
   datacamp: 'https://www.datacamp.com/portfolio/markpitblado',
   exercism: 'https://exercism.org/profiles/mark-pitblado',
   rss: 'https://markpitblado.me/feed.xml',

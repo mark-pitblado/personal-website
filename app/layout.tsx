@@ -57,11 +57,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="dark:mocha latte bg-base text-text antialiased">
         <ThemeProviders>
-          <script
-            defer
-            data-domain="markpitblado.me"
-            src="https://plausible.io/js/script.js"
-          ></script>
           <SectionContainer>
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
