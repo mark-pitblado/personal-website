@@ -5,7 +5,6 @@ import {
   Linkedin,
   Mastodon,
   Orcid,
-  Plausible,
   Exercism,
   RSSIcon,
 } from './icons'
@@ -17,7 +16,6 @@ const components = {
   linkedin: Linkedin,
   mastodon: Mastodon,
   orcid: Orcid,
-  plausible: Plausible,
   exercism: Exercism,
   rss_icon: RSSIcon,
 }
