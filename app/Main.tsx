@@ -26,7 +26,7 @@ export default function Home({ posts }) {
             >
               Mastodon
             </a>
-            . Part of{' '}
+            .
           </p>
         </div>
         <ul className="divide-y divide-overlay1">
