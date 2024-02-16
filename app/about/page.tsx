@@ -15,9 +15,11 @@ export default function Page() {
     <>
       <AuthorLayout content={mainContent}>
         <MDXLayoutRenderer code={author.body.code} />
-        <Link href="/about/this-site" className="text-green hover:text-teal">
-          {' '}
-          Site Details
+        <Link href="/about/this-site">
+          <button className="rounded-md bg-green px-3 py-2 text-sm font-semibold text-base shadow-sm hover:bg-blue">
+            {' '}
+            Site Details
+          </button>
         </Link>
       </AuthorLayout>
     </>
