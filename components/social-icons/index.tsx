@@ -1,4 +1,14 @@
-import { Mail, Github, Youtube, Linkedin, Mastodon, Orcid, Exercism, RSSIcon } from './icons'
+import {
+  Mail,
+  Github,
+  Youtube,
+  Linkedin,
+  Mastodon,
+  Orcid,
+  Exercism,
+  RSSIcon,
+  Keyoxide,
+} from './icons'
 
 const components = {
   mail: Mail,
@@ -9,6 +19,7 @@ const components = {
   orcid: Orcid,
   exercism: Exercism,
   rss_icon: RSSIcon,
+  keyoxide: Keyoxide,
 }
 
 type SocialIconProps = {
