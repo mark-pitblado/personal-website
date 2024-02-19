@@ -8,7 +8,7 @@ export default function SiteDetails() {
           <h1 className="mt-2 text-3xl text-lavender font-bold tracking-tight sm:text-4xl">
             Site Details
           </h1>
-          <blockquote className="mt-6 text-yellow"> Last reviewed: 2023-12-11</blockquote>
+          <blockquote className="mt-6 text-yellow"> Last reviewed: 2024-02-18</blockquote>
           <h2 className="mt-6 text-2xl text-lavender font-bold tracking-tight sm:text-3xl">
             Licensing
           </h2>
@@ -30,7 +30,11 @@ export default function SiteDetails() {
             >
               Simple Icon Collaborators
             </a>{' '}
-            and are under a CC0 1.0 license.
+            and are under a CC0 1.0 license. Except for the checkmark icon which is by{' '}
+            <a href="https://phosphoricons.com/" className="text-green hover:text-teal">
+              Phosphor Icons
+            </a>{' '}
+            and is licensed under the MIT license.
           </p>
           <h4 className="mt-3 text-lg font-bold text-lavender">Content</h4>
           <p className="mt-3 text-text leading-8">
@@ -38,9 +42,8 @@ export default function SiteDetails() {
           </p>
           <p className="mt-3 text-text leading-8">
             Content on this site may have a badge on it, indicating how AI was used in the creation
-            of the page (if it was used at all). These badges are from
-            [ai-label.org](https://ai-label.org) and are licensed under CC-SA. Below are the three
-            badges:
+            of the page (if it was used at all). These badges are from ai-label.org and are licensed
+            under CC-SA. Below are the three badges:
           </p>
           <div className="pt-3 flex flex-wrap gap-3 ">
             <Image

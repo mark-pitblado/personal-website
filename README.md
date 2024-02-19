@@ -4,8 +4,6 @@
             alt="RSS Feed"/></a>
 </p>
 
-
-
 <p align="center">
 	<a href="https://github.com/mark-pitblado/personal-website/stargazers">
 		<img alt="Stargazers" src="https://img.shields.io/github/stars/mark-pitblado/personal-website?style=for-the-badge&color=a6e3a1&logoColor=D9E0EE&labelColor=302D41"></a>
@@ -17,4 +15,3 @@
 # My corner of the internet
 
 This is the space that I write on random things that come to mind, and link to other public places for my online identity. A huge thank you to [Tim](https://github.com/timlrx), a fellow UBC alumni for the development of the template which this site is based on.
-
