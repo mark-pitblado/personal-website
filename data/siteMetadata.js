@@ -17,6 +17,7 @@ const siteMetadata = {
   datacamp: 'https://www.datacamp.com/portfolio/markpitblado',
   exercism: 'https://exercism.org/profiles/mark-pitblado',
   rss: 'https://markpitblado.me/feed.xml',
+  keyoxide: 'https://keyoxide.org/3375A34A0C102A83B1AD8049062D64188CBB9F70',
   locale: 'en-US',
   search: {
     provider: 'kbar',
