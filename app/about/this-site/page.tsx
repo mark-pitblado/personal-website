@@ -38,7 +38,11 @@ export default function SiteDetails() {
           </p>
           <h4 className="mt-3 text-lg font-bold text-lavender">Profile Picture/Icon</h4>
           <p className="mt-3 text-text leading-8">
-            My profile picture is courtesy of <a href="https://www.andycarolan.com" className="text-green hover:text-teal">Andy Carolan</a>.
+            My profile picture is courtesy of{' '}
+            <a href="https://www.andycarolan.com" className="text-green hover:text-teal">
+              Andy Carolan
+            </a>
+            .
           </p>
           <h4 className="mt-3 text-lg font-bold text-lavender">Content</h4>
           <p className="mt-3 text-text leading-8">
