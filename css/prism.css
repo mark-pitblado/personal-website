@@ -1,129 +1,96 @@
-/**
- * CSS Styles for code highlighting.
- * Feel free to customize token styles 
- * by copying from a prismjs compatible theme:
- * https://github.com/PrismJS/prism-themes
- */
-
-/* Code title styles */
-.remark-code-title {
-  @apply rounded-t bg-gray-700 dark:bg-gray-800 px-5 py-3 font-mono text-sm font-bold text-gray-200;
+/* Define the Catppuccino Mocha theme colors */
+:root {
+  --catppuccino-mocha-bg: #1e1e2e;
+  --catppuccino-mocha-fg: #f8f8f2;
+  --catppuccino-mocha-accent: #cba6f7;
+  --catppuccino-mocha-comment: #6c7086;
+  --catppuccino-mocha-string: #a6e3a1;
+  --catppuccino-mocha-operator: #89dceb;
+  --catppuccino-mocha-keyword: #cba6f7;
+  --catppuccino-mocha-function: #89b4fa;
+  --catppuccino-mocha-variable: #ffb7b7;
 }
 
-.remark-code-title + div > pre {
-  @apply mt-0 rounded-t-none;
+/* Prism CSS for Catppuccino Mocha theme */
+pre[class*='language-'] {
+  color: var(--catppuccino-mocha-fg);
+  background: var(--catppuccino-mocha-bg);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.5em;
 }
 
-/* Code block styles */
-.code-highlight {
-  @apply float-left min-w-full;
-}
-
-.code-line {
-  @apply -mx-4 block border-l-4 border-transparent pl-4 pr-4;
-}
-
-.code-line.inserted {
-  @apply bg-green-500 bg-opacity-20;
-}
-
-.code-line.deleted {
-  @apply bg-red-500 bg-opacity-20;
-}
-
-.highlight-line {
-  @apply -mx-4 border-l-4 border-primary-500 bg-gray-700 bg-opacity-50;
-}
-
-.line-number::before {
-  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
-  content: attr(line);
-}
-
-/* Token styles */
-/**
- * MIT License
- * Copyright (c) 2018 Sarah Drasner
- * Sarah Drasner's[@sdras] Night Owl
- * Ported by Sara vieria [@SaraVieira]
- * Added by Souvik Mandal [@SimpleIndian]
- */
 .token.comment,
 .token.prolog,
+.token.doctype,
 .token.cdata {
-  color: rgb(99, 119, 119);
-  font-style: italic;
+  color: var(--catppuccino-mocha-comment);
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: var(--catppuccino-mocha-fg);
 }
 
-.namespace {
-  color: rgb(178, 204, 214);
+.token.namespace {
+  opacity: 0.7;
 }
 
-.token.deleted {
-  color: rgba(239, 83, 80, 0.56);
-  font-style: italic;
-}
-
-.token.symbol,
-.token.property {
-  color: rgb(128, 203, 196);
-}
-
+.token.property,
 .token.tag,
-.token.operator,
-.token.keyword {
-  color: rgb(127, 219, 202);
-}
-
-.token.boolean {
-  color: rgb(255, 88, 116);
-}
-
-.token.number {
-  color: rgb(247, 140, 108);
-}
-
 .token.constant,
-.token.function,
-.token.builtin,
-.token.char {
-  color: rgb(130, 170, 255);
+.token.symbol,
+.token.deleted {
+  color: var(--catppuccino-mocha-accent);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--catppuccino-mocha-variable);
 }
 
 .token.selector,
-.token.doctype {
-  color: rgb(199, 146, 234);
-  font-style: italic;
-}
-
 .token.attr-name,
-.token.inserted {
-  color: rgb(173, 219, 103);
-  font-style: italic;
-}
-
 .token.string,
-.token.url,
-.token.entity,
-.language-css .token.string,
-.style .token.string {
-  color: rgb(173, 219, 103);
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--catppuccino-mocha-string);
 }
 
-.token.class-name,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--catppuccino-mocha-operator);
+}
+
 .token.atrule,
-.token.attr-value {
-  color: rgb(255, 203, 139);
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--catppuccino-mocha-function);
+}
+
+.token.keyword {
+  color: var(--catppuccino-mocha-keyword);
 }
 
 .token.regex,
-.token.important,
-.token.variable {
-  color: rgb(214, 222, 235);
+.token.important {
+  color: #f90;
 }
 
 .token.important,
@@ -135,10 +102,6 @@
   font-style: italic;
 }
 
-.token.table {
-  display: inline;
-}
-
-.token.table {
-  display: inline;
+.token.entity {
+  cursor: help;
 }
