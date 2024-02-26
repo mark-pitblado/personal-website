@@ -1,6 +1,6 @@
 ---
-title: "Goodbye Logseq, Obsidian, and Vimwiki. Hello, mdBook!"
-summary: "I wanted three things: the ability to use vim, full page notes, and to have access to notes while on the go. Mdbook has checked all those boxes." 
+title: 'Goodbye Logseq, Obsidian, and Vimwiki. Hello, mdBook!'
+summary: 'I wanted three things: the ability to use vim, full page notes, and to have access to notes while on the go. Mdbook has checked all those boxes.'
 date: '2024-02-18'
 layout: PostSimple
 tags: ['codeberg', 'notes', 'mdbook', 'logseq', 'obsidian', 'vimwiki']
@@ -8,7 +8,7 @@ tags: ['codeberg', 'notes', 'mdbook', 'logseq', 'obsidian', 'vimwiki']
 
 I have bounced around numerous note-taking applications, including Obsidian, Logseq, and Vimwiki. Each of them has had at least one fatal flaw that pushed me away from using it. For Logseq, it was the outliner methodology instead of just a standard page. For Obsidian it was the almost complete vim integration but that didn't quite have everything. For Vimwiki, it was being able to read the notes on mobile. I sought a solution that would check all of these boxes.
 
-I began thinking, "what if I just made a documentation site?". Sure, there may be 5% of notes that I would be unable to write since they contained sensitive information or something personal, but the other 95% of the notes I took were completely fine to be made public, and may even help others. I have used material for mkdocs before, but wanted to try something new. [mdBook](https://rust-lang.github.io/mdBook/), written in rust, fit the bill. I could install with cargo, and then get up and running with a simple `mdbook serve` for development, and an `mdbook build` when I was ready to share. This allows me to edit and write my notes using [neovim](https://neovim.org), read them on the go by just going to the webpage, and use the full page notes format. 
+I began thinking, "what if I just made a documentation site?". Sure, there may be 5% of notes that I would be unable to write since they contained sensitive information or something personal, but the other 95% of the notes I took were completely fine to be made public, and may even help others. I have used material for mkdocs before, but wanted to try something new. [mdBook](https://rust-lang.github.io/mdBook/), written in rust, fit the bill. I could install with cargo, and then get up and running with a simple `mdbook serve` for development, and an `mdbook build` when I was ready to share. This allows me to edit and write my notes using [neovim](https://neovim.org), read them on the go by just going to the webpage, and use the full page notes format.
 
 Getting mdBook setup was a piece of cake. I have outlined the exact steps in [a note](https://notes.markpitblado.me/setting-up-mdbook.html), but it basically boils down to a cargo install, and then just writing markdown files, outlining the table of contents structure in a single `SUMMARY.md` file. Configuration options are all done in `.toml`, and the only big change I ended up making was making it catppuccin themed through [mdbook-catppuccin](https://github.com/catppuccin/mdbook)
 
@@ -21,6 +21,3 @@ Because the contents of the book directory (the result of `mdbook build`) are ju
 To see what the code for this new notes site looks like, you can go to the [codeberg repo](https://codeberg.org/mark-pitblado/notes). If you want to take a look at the notes, they are found [here](https://notes.markpitblado.me)
 
 <div className="w-32">![no-ai-used-badge](https://cdn.markpitblado.me/no-ai-used.png)</div>
-
-
-

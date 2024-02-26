@@ -29,24 +29,8 @@ module.exports = {
         primary: colors.cyan,
         gray: colors.gray,
       },
-      typography: ({ theme }) => ({
+      typography: () => ({
         DEFAULT: {
-          css: {
-            a: {
-              color: '#40a02b',
-              '&:hover': {
-                color: `#179299`,
-              },
-            },
-            'h1,h2,h3,h4,h5,h6': {
-              color: '#1e66f5',
-            },
-            code: {
-              color: '#fe640b',
-            },
-          },
-        },
-        invert: {
           css: {
             a: {
               color: '#a6e3a1',
@@ -54,11 +38,23 @@ module.exports = {
                 color: '#94e2d5',
               },
             },
-            'h1,h2,h3,h4,h5,h6': {
+            'h1,h3,h4,h5,h6': {
               color: '#89dceb',
+            },
+            h2: {
+              color: '#f9e2af',
             },
             code: {
               color: '#fab387',
+            },
+            body: {
+              color: '#cdd6f4',
+            },
+            blockquote: {
+              color: '#f5e0dc',
+            },
+            strong: {
+              color: '##74c7ec',
             },
           },
         },
