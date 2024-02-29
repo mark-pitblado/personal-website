@@ -1,22 +1,8 @@
 import { genPageMetadata } from 'app/seo'
-import GitHubCalendar from 'react-github-calendar'
+import GitHubCalendar, { ThemeInput } from 'react-github-calendar'
 import Link from 'next/link'
 
 export const metadata = genPageMetadata({ title: 'About' })
-
-interface ThemeInput {
-  light?: string[];
-  dark?: string[];
-}
-
-interface GitHubCalendar {
-  username?: string,
-  hideTotalCount?: string,
-  hideColorLegend?: string,
-  hideMonthLabels?: string,
-}
-
-
 
 const minimalTheme: ThemeInput = {
   light: ['#313244', '#cba6f7'],
@@ -49,7 +35,7 @@ export default function Page() {
         </Link>
       </div>
       <div className="pt-10">
-        <GitHubCalendar username="mark-pitblado" hideColorLegend="true" hideMonthLabels="true" hideTotalCount="true" blockRadius="5" theme={minimalTheme} />
+        <GitHubCalendar username="mark-pitblado" hideColorLegend={true} hideMonthLabels={true} hideTotalCount={true} blockRadius={5} theme={minimalTheme} />
       </div>
     </>
   )
