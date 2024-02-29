@@ -1,7 +1,27 @@
 import { genPageMetadata } from 'app/seo'
+import GitHubCalendar from 'react-github-calendar'
 import Link from 'next/link'
 
 export const metadata = genPageMetadata({ title: 'About' })
+
+interface ThemeInput {
+  light?: string[];
+  dark?: string[];
+}
+
+interface GitHubCalendar {
+  username?: string,
+  hideTotalCount?: string,
+  hideColorLegend?: string,
+  hideMonthLabels?: string,
+}
+
+
+
+const minimalTheme: ThemeInput = {
+  light: ['#313244', '#cba6f7'],
+  dark: ['#313244', '#cba6f7']
+};
 
 export default function Page() {
   return (
@@ -19,7 +39,7 @@ export default function Page() {
           I'll respond as soon as I can. I grew up loving to tinker with things, and never really
           stopped. If I were to describe what I do, I would summarize it as "using data to help
           solve problems for the public good". In my free time I love to read, and explore new and
-          emerging open-source software. Currently, I a
+          emerging open-source software.
         </div>
         <Link href="/about/this-site">
           <button className="rounded-md bg-green px-3 py-2 text-sm font-semibold text-base shadow-sm hover:bg-blue">
@@ -27,6 +47,9 @@ export default function Page() {
             Site Details
           </button>
         </Link>
+      </div>
+      <div className="pt-10">
+        <GitHubCalendar username="mark-pitblado" hideColorLegend="true" hideMonthLabels="true" hideTotalCount="true" blockRadius="5" theme={minimalTheme} />
       </div>
     </>
   )
