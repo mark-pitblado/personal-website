@@ -6,8 +6,8 @@ export const metadata = genPageMetadata({ title: 'About' })
 
 const minimalTheme: ThemeInput = {
   light: ['#313244', '#cba6f7'],
-  dark: ['#313244', '#cba6f7']
-};
+  dark: ['#313244', '#cba6f7'],
+}
 
 export default function Page() {
   return (
@@ -35,7 +35,14 @@ export default function Page() {
         </Link>
       </div>
       <div className="pt-10">
-        <GitHubCalendar username="mark-pitblado" hideColorLegend={true} hideMonthLabels={true} hideTotalCount={true} blockRadius={5} theme={minimalTheme} />
+        <GitHubCalendar
+          username="mark-pitblado"
+          hideColorLegend={true}
+          hideMonthLabels={true}
+          hideTotalCount={true}
+          blockRadius={5}
+          theme={minimalTheme}
+        />
       </div>
     </>
   )
