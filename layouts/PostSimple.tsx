@@ -38,8 +38,8 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               </div>
             </div>
             <div className="flex space-x-1 pt-5 flex-wrap">
-              {tags.map((tag) => (
-                <span className="inline-flex items-center gap-x-1.5 rounded-md bg-base px-2 py-1 text-xs font-medium text-text">
+              {tags.map((tag, index) => (
+                <span key={index} className="inline-flex items-center gap-x-1.5 rounded-md bg-base px-2 py-1 text-xs font-medium text-text">
                   <svg
                     className="fill-blue w-3 h-3"
                     xmlns="http://www.w3.org/2000/svg"
