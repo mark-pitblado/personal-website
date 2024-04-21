@@ -1,0 +1,87 @@
+---
+title: 'Deploying mdbook to codeberg pages using woodpecker CI'
+summary: 'This pipeline allows me to simply commit to the main branch, and then the CI handles everything else, including deployment to codeberg pages.'
+date: '2024-03-17'
+layout: PostSimple
+tags: ['codeberg', 'woodpecker-ci', 'mdbook']
+---
+
+I have been working on transitioning more of my sites to [Codeberg](https://codeberg.org) after becoming a member, and today was the day that I took the plunge into using their hosted [Woodpecker CI](https://woodpecker-ci.org) instance. You have to [apply for access](https://docs.codeberg.org/ci/) by submitting an issue to the [requests repository](https://codeberg.org/Codeberg-e.V./requests#woodpecker-ci), however the process was very quick and painless. Within a few days I had been approved and had access.
+
+To start, I wanted to configure my [notes](https://notes.markpitblado.me) because it was the simpliest and almost certainly receives the least traffic. I laid out the following steps to facilitate the transition:
+
+1. Turn off mirroring of the codeberg repository to the github repository previously used for vercel deployment.
+2. Configure the woodpecker-ci via `.woodpecker.yml` and ensure that it was working.
+3. Add the `.domain` file so that notes.markpitblado.me would redirect to the codeberg pages server.
+
+## Setting up woodpecker-ci
+
+Fortunately, there was already an example configuration for [mdbook](https://rust-lang.github.io/mdBook/) available in the [ci examples repository](https://codeberg.org/Codeberg-CI/examples). I just had to copy the `woodpecker.yml` file listed in the mdbook directory.
+
+```yaml showLineNumbers
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+
+when:
+  branch: master
+  event: [push, cron]
+
+steps:
+  build:
+    image: peaceiris/mdbook:latest
+    commands:
+      - mdbook build
+
+  publish:
+    image: bitnami/git
+    secrets: [mail, codeberg_token]
+    environment:
+      - MDBOOK_OUTPUT=book
+    commands:
+      - git config --global user.email $MAIL
+      - git config --global user.name "Woodpecker CI"
+      - git clone -b pages https://$CODEBERG_TOKEN@codeberg.org/$CI_REPO.git $CI_REPO_NAME
+      - cp -ar $MDBOOK_OUTPUT/. $CI_REPO_NAME/
+      - cp .domains $CI_REPO_NAME || true
+      - cd $CI_REPO_NAME
+      - git add .
+      - git commit -m "Woodpecker CI ${CI_BUILD_CREATED}"
+      - git push
+```
+
+Note that this file uses two secrets: `mail`, and `codeberg_token`. The `mail` token should be set to whichever email is used for your git commits, and the `codeberg_token` can be obtained by going into your codeberg Account Settings > Applications and then generating a new token. You should only need to give the token read/write access to repositories. Copy the token into woodpecker-ci under the repositories secrets. Make sure to call the secret `codeberg_token` exactly. **Never expose this token publicly, including in any commits.** It should only be managed through the woodpecker secrets manager. More documentation on woodpecker secrets can be found [in the woodpecker documentation](https://woodpecker-ci.org/docs/usage/secrets)
+
+Next, I had to change branch `master` to `main` to match the setup for my repository.
+
+```yaml {2} showLineNumbers
+when:
+  branch: main
+  event: [push, cron]
+```
+
+## Deploying
+
+Deploying was simple. As soon as I committed the `woodpecker.yml` file and pushed to main, the ci pipeline triggered and was observable from the woodpecker GUI. After fixing the master -> main issue, it worked without any further troubleshooting. Before running, I checked that the peaceiris/mdbook and bitnami/git images were still active. If you are reading this many years in the future, you may need to switch these images if they are no longer maintained.
+
+## Setting up the custom domain
+
+To use the notes.markpitblado.me domain with the codeberg page, I had to add a `.domains` file at the root of the repository. It is a very simple text file, that in this case, just includes a single line.
+
+```
+notes.markpitblado.me
+```
+
+This `.domains` file should automatically be copied over into the pages branch when you commit and push for the first time.
+
+I then pointed the domain to the site via a CNAME record to `notes.mark-pitblado.codeberg.page`. Documentation on using custom domains with codeberg pages can be found [in the codeberg documentation](https://docs.codeberg.org/codeberg-pages/using-custom-domain/).
+
+The finalized setup can be found [in the codeberg repository for my notes](https://codeberg.org/mark-pitblado/notes)
+
+## Next steps
+
+The big task is migrating my main site (this site) next. I may try to configure woodpecker to send the deployment to vercel instead of using codeberg pages. Prettier should hopefully be quite easy as there is a [woodpecker prettier plugin](https://woodpecker-ci.org/plugins/Prettier)
+
+---
+
+<div className="w-32">![no-ai-used-badge](https://cdn.markpitblado.me/no-ai-used.png)</div>
