@@ -53,6 +53,9 @@ module.exports = {
             blockquote: {
               color: '#f5e0dc',
             },
+            th: {
+              color: '#cdd6f4',
+            },
             strong: {
               color: '##74c7ec',
             },
