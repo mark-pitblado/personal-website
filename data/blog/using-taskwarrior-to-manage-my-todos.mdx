@@ -1,0 +1,53 @@
+---
+title: 'Using taskwarrior to manage my todos'
+date: '2024-04-25'
+summary: 'To further my journey in exploring more terminal tools, I decided to give taskwarrior a try. Integrating bugwarrior has helped to centralize github issues in one place.'
+tags: ['taskwarrior', 'productivity', 'bugwarrior', 'cli', 'tools']
+layout: PostSimple
+---
+
+I have been on a journey recently to discover more terminal tools. Having them close by while working in things like [neovim](https://neovim.io) reduces the number of times that I need to bounce around in the browser or the number of applications that I need to install on my machine. Currently I just use [alacritty](https://alacritty.org/), firefox, and thunderbird and that's pretty much it. Today I added [taskwarrior](https://taskwarrior.org) to the growing list of applications I can use from within the terminal.
+
+## What is taskwarrior?
+
+Taskwarrior is a command line application (cli) that enables the tracking of tasks. Once installed, I can just use `task ls` to get an overview of things that I have to do. It comes with a specific syntax to enable the assignment of priority, due dates, projects etc and can be as simple or complex as you would like it to be. To install it, simply follow the [instructions listed in the download page](https://taskwarrior.org/download/) for your distribution. Since I am using a debian based distribution, I could install with `sudo apt-get install taskwarrior`.
+
+## Basic usage
+
+As it just the first day, I just have some primary commands committed to memory:
+
+- `task add` will add a task to the list. By default, it just needs a description (not contained in quotations) entered after the word "add". For example `task add buy juice` 
+- `task list` will show all current tasks on the todo list.
+- `task <id> done` will complete a task based on the id number. The id will be shown in the output of `task list`.  
+
+For a more in depth list of the syntax, I found [this list helpful](https://docs.wingtask.com/docs/taskwarrior_commands/). I have started to use `priority:` and `due:` from within the description to automatically assign the due date and priority. 
+
+## Integrating bugwarrior
+
+[Bugwarrior](https://bugwarrior.readthedocs.io/en/latest/) enabled me to integrate github issues directly into taskwarrior. The setup was quite straightforward, and surprisingly didn't involve any configuration of my taskwarrior setup on the bugwarrior side. Bugwarrior, like taskwarrior, [can be installed using apt-get](https://bugwarrior.readthedocs.io/en/latest/getting.html), or you can use pip. 
+
+### Configuring bugwarrior
+
+Bugwarrior requires a configuration file, it will not work without one. I chose to write my configuration at `.config/bugwarrior/bugwarriorrc` however there are other possible path options as outlined in [the documentation](https://bugwarrior.readthedocs.io/en/latest/manpage.html#configuration-files). One thing that wasn't super clear from the readthedocs was that there should not be a file extension on the `bugwarriorrc` file (so no `.toml` for example). Mine was the bare minimum for GitHub, and looked like this: 
+
+```ini
+[general]
+targets = my_github
+
+[my_github]
+service = github
+github.username = <your-username-here>
+github.login = <your-username-here>
+github.token = <your-github-token-here>
+github.description_template = {{githubtitle}}
+```
+
+I chose to configure a [fine-grain access token](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/) with read-only access to public repos. If you plan on using bugwarrior for private repositories, I would suggest looking at the pages in the documentation and not leaving the token in the configuration file directory. I found some difficulties getting the `.toml` format for the configuration file working, and so just opted to use the `.ini` format instead.
+
+The GitHub issues will automatically be assigned to a project with the name of the GitHub repository, so I didn't find it necessary to also include that information in the task description (or even the fact that it was from github). Also, I didn't think it was necessary to include the PR or issue number assigned by GitHub, however down the road I may include that to make using [closing keywords](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) easier.
+
+## Future integrations
+
+I would like to try out [taskwarrior-tui](https://github.com/kdheepak/taskwarrior-tui), however it has not yet been tested with version 3 of taskwarrior. I would also like to configure an android app to sync to taskwarrior through the taskserver. 
+
+<div className="w-1/12">![no-ai-used-badge](https://cdn.markpitblado.me/no-ai-used.png)</div>
