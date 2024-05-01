@@ -62,30 +62,12 @@ export default function PostLayout({ content, next, prev, children }: LayoutProp
               </div>
             </div>
             <footer>
-              <div className="flex flex-col text-sm font-medium sm:flex-row sm:justify-between sm:text-base">
-                {prev && prev.path && (
-                  <div className="pt-4 xl:pt-8">
-                    <Link
-                      href={`/${prev.path}`}
-                      className="text-pink hover:text-teal"
-                      aria-label={`Previous post: ${prev.title}`}
-                    >
-                      &larr; {prev.title}
-                    </Link>
-                  </div>
-                )}
-                {next && next.path && (
-                  <div className="pt-4 xl:pt-8">
-                    <Link
-                      href={`/${next.path}`}
-                      className="text-pink hover:text-teal"
-                      aria-label={`Next post: ${next.title}`}
-                    >
-                      {next.title} &rarr;
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <button
+                type="button"
+                className="rounded bg-surface0 outline px-2 py-1 text-sm font-semibold text-green shadow-sm hover:bg-surface1"
+              >
+                <a href="mailto:website@layer404.com">Reply by email</a>
+              </button>
             </footer>
           </div>
         </div>
