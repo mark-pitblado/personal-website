@@ -59,15 +59,6 @@ export default function Home({ posts }) {
                         </div>
                         <div className="prose max-w-none text-subtext1">{summary}</div>
                       </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-sky hover:text-blue"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </article>
